@@ -19,6 +19,8 @@ public class User {
    @Column(name = "email")
    private String email;
 
+  // private Car car;
+
    public User() {}
    
    public User(String firstName, String lastName, String email) {
