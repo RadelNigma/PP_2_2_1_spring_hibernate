@@ -23,8 +23,6 @@ public class User {
    @JoinColumn(name = "car_id", referencedColumnName = "id")
    private Car car;
 
-
-
    public User() {}
    
    public User(String firstName, String lastName, String email) {
@@ -76,7 +74,19 @@ public class User {
       return email;
    }
 
+   @Override
+   public String toString() {
+      return "User{" +
+              "id=" + id +
+              ", firstName='" + firstName + '\'' +
+              ", lastName='" + lastName + '\'' +
+              ", email='" + email + '\'' +
+              '}'+"\n";
+   }
+
    public void setEmail(String email) {
       this.email = email;
+
+
    }
 }

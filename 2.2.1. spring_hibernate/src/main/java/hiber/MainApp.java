@@ -20,6 +20,9 @@ public class MainApp {
       userService.add(new User("User2", "Lastname2", "user2@mail.ru", new Car("Nissan",111)));
       userService.add(new User("User3", "Lastname3", "user3@mail.ru", new Car("Mitsubishi",1010)));
       userService.add(new User("User4", "Lastname4", "user4@mail.ru", new Car("Audi",7)));
+      userService.add(new User("Radel", "Nigmatullin", "radelnigma@mail.ru", new Car("Nissan",1)));
+      userService.add(new User("Ivan", "Glinka", "ivanglinkamail.ru", new Car("Mitsubishi",1010)));
+      userService.add(new User("Aleksandr", "Suvorov", "suvorov.ru", new Car("Mitsubishi",101)));
 
 
       List<User> users = userService.listUsers();
@@ -31,6 +34,11 @@ public class MainApp {
          System.out.println("Auto = "+user.getCar());
          System.out.println();
       }
+
+
+      List<User> usersCar = userService.getUserByCarModelAndSeries("Mitsubishi", 1010);
+
+      System.out.println(usersCar);
 
       context.close();
    }
