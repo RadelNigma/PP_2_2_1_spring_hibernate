@@ -3,7 +3,7 @@ package hiber.model;
 import javax.persistence.*;
 
 @Entity
-public class Car  {
+public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
@@ -12,9 +12,6 @@ public class Car  {
 
     private int series;
 
-//    @OneToOne(mappedBy = "car", cascade = CascadeType.ALL)
-//    private User user;
-
     public Car() {
     }
 
@@ -22,14 +19,6 @@ public class Car  {
         this.model = model;
         this.series = series;
     }
-
-//    public User getUser() {
-//        return user;
-//    }
-//
-//    public void setUser(User user) {
-//        this.user = user;
-//    }
 
     public int getId() {
         return id;
